@@ -1,0 +1,83 @@
+<!DOCTYPE html">
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    nav a {
+        display: block;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #333333;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #999999;
+        transition: all 0.2s ease-in-out;
+    }
+    nav a:hover {
+        background-color: #333333;
+        color: #ffffff;
+        box-shadow: 0 0 10px #999999;
+    }  
+    form {
+        display: flex;
+        margin-top: 10px;
+    }
+    input {
+        width: 100%;
+        margin-right: 10px;
+        padding: 10px;
+        background-color: #ffffff;
+        color: #333333;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #999999;
+        transition: all 0.2s ease-in-out;
+    }
+    input:hover {
+        background-color: #333333;
+        color: #ffffff;
+        box-shadow: 0 0 10px #999999;
+    }  
+    button {
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #333333;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #999999;
+        transition: all 0.2s ease-in-out;
+    }
+    button:hover {
+        background-color: #333333;
+        color: #ffffff;
+        box-shadow: 0 0 10px #999999;
+    }
+</style>
+</head>
+<body>
+    
+              
+<div id="conteneur"> 
+<nav>
+
+<a href="/magasin">Acceuil</a>
+<a href="/admin">Admin</a>
+<a href="{% url 'logout' %}">Se Deconnecter</a>
+
+</nav>
+</div>
+</body>
+</html>

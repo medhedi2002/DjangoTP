@@ -1,0 +1,42 @@
+{% extends 'magasin/base.html' %}
+
+{% block title %} Catalogue de fournisseurs {% endblock title %}
+
+{% block content %}
+
+<!-- body -->
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-12 mb-3 text-center">
+      <p>Catalogue de fournisseurs </p>
+      <a href="{% url 'home' %}">Accueil</a>
+    </div>
+    <div id='products' class="col-lg-9 mx-auto">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Adresse</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for fournisseur in fournisseurs %}
+          <tr id={{fournisseur.id}}>
+            <td>{{fournisseur.nom}}</td>
+            <td>{{fournisseur.adresse}}</td>
+            <td>{{fournisseur.email}}</td>
+            <td>{{fournisseur.telephone}}</td>
+            <td><a href="{% url 'modifierFournisseur' fournisseur.id %}" class="btn btn-primary btn-sm">Modifier</a></td>
+            <td><a href="{% url 'supprimerFournisseur' fournisseur.id %}" class="btn btn-danger btn-sm">Supprimer</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
